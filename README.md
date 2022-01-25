@@ -10,3 +10,5 @@ Technical Test for PT. Inovasi Anak Indonesia (Parkee)
 1. If you can't login from the .exe file or while running the project from IDE, I think its because the root and password configuration in JdbcDataObj.java, 
   I haven't found the solution yet, since it's my first try to make a desktop application.
  
+#Demo Application Video
+https://drive.google.com/drive/folders/1Ffl_F58sOStJHKvOCcdptKdRKF0ngXUG?usp=sharing
