@@ -1,0 +1,17 @@
+CREATE DATABASE `parkingpos
+
+CREATE TABLE `parkingpos`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+CREATE TABLE `parkingpos`.`transaksi` (
+  `id_transaksi` INT NOT NULL AUTO_INCREMENT,
+  `plat_nomor` VARCHAR(45) NULL,
+  `jenis_kendaraan` VARCHAR(45) NULL,
+  `waktu_checkin` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `waktu_heckout` TIMESTAMP NULL,
+  `metode_pembayaran` VARCHAR(45) NULL,
+  PRIMARY KEY (`id_transaksi`));
+	

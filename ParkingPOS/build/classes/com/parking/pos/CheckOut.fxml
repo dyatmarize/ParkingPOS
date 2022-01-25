@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="530.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parking.pos.CheckOutController">
+   <center>
+      <AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="1080.0">
+         <children>
+            <TextField fx:id="tfPlatNomor" layoutX="28.0" layoutY="323.0" prefHeight="25.0" prefWidth="342.0" />
+            <Label layoutX="28.0" layoutY="296.0" text="Plat Nomor Kendaraan" />
+            <Label layoutX="29.0" layoutY="217.0" text="Entry Camera" />
+            <Line endX="-100.0" endY="436.0" layoutX="538.0" layoutY="30.0" startX="-100.0" />
+            <Label layoutX="572.0" layoutY="30.0" text="Parking POS">
+               <font>
+                  <Font name="Segoe UI Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" layoutX="585.0" layoutY="80.0" text="Current Date and Time" />
+            <Button fx:id="btnPay" layoutX="592.0" layoutY="432.0" mnemonicParsing="false" onAction="#pay" prefHeight="25.0" prefWidth="252.0" style="-fx-background-color: #00d2d3;" text="Pay" />
+            <StackPane layoutX="29.0" layoutY="30.0" prefHeight="150.0" prefWidth="200.0" style="-fx-border-color: #000;">
+               <children>
+                  <ImageView fitHeight="182.0" fitWidth="337.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </StackPane>
+            <Label layoutX="458.0" layoutY="171.0" text="Check In Time" />
+            <Label layoutX="458.0" layoutY="195.0" text="Check Out Time" />
+            <Label layoutX="458.0" layoutY="122.0" text="Plat Nomor" />
+            <Label layoutX="458.0" layoutY="348.0" text="Total">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="458.0" layoutY="377.0" text="Duration">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelTotal" layoutX="821.0" layoutY="348.0" text="Rp. 0,00">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelDuration" layoutX="830.0" layoutY="377.0" text="0h 0m 0s">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="cbMetodePembayaran" layoutX="29.0" layoutY="397.0" prefWidth="150.0" />
+            <Label layoutX="28.0" layoutY="373.0" text="Metode Pembayaran" />
+            <Button fx:id="btnSubmit" layoutX="314.0" layoutY="397.0" mnemonicParsing="false" onAction="#btnSubmit" style="-fx-background-color: #00d2d3;" text="Submit" />
+            <Label layoutX="458.0" layoutY="147.0" text="Jenis Kendaraan" />
+            <Label layoutX="458.0" layoutY="220.0" text="Metode Pembayaran" />
+            <Label fx:id="labelPlatNomor" layoutX="825.0" layoutY="122.0" text="**" />
+            <Label fx:id="labelJenisKendaraan" layoutX="825.0" layoutY="147.0" text="**" />
+            <Label fx:id="labelWaktuCheckIn" layoutX="825.0" layoutY="171.0" text="**" />
+            <Label fx:id="labelWaktuCheckOut" layoutX="825.0" layoutY="195.0" text="**" />
+            <Label fx:id="labelMetodePembayaran" layoutX="825.0" layoutY="220.0" text="**" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="50.0" prefWidth="960.0" style="-fx-background-color: #84817a;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelUser" alignment="TOP_LEFT" text="user" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="10.0" top="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCheckIn" mnemonicParsing="false" onAction="#checkIn" prefWidth="100.0" style="-fx-background-color: #1dd1a1;" text="Check In" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="800.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
